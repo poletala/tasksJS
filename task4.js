@@ -26,5 +26,4 @@ function guessGame() {
     else {alert("Поздравляю, Вы угадали!!!")
     }
 }
-
 guessGame()
