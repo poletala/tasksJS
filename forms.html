@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="./styles/Roboto.css">
+  <link rel="stylesheet" href="./forms.css">
+</head>
+<body>
+  <div id="root">
+    <form id="frame">
+      <h1>Вход</h1>
+      <div class="inputs">
+        <div class="email-input">
+          <p>Email</p>
+          <input type="email" placeholder="Введите email" name="email" autocomplete="email" id="email">
+          <span id="error" class="error-text"></span>
+        </div>
+        <div class="password-input">
+          <p>Пароль</p>
+          <input type="password" placeholder="Введите пароль" id="password">
+          <span id="error-password" class="error-text"></span>
+        </div>
+        <div class="checkbox">
+          <div class="checkbox-input">
+            <input type="checkbox" id="checkbox"/>
+            <label for="checkbox">Я согласен получать обновления на почту</label>
+          </div>
+          <span id="checkbox-error" class="error-text"></span>
+        </div>
+       
+      </div>
+      <button class="button" type="button" onclick="myFunction()">Войти</button>
+    </form>
+  </div>
+</body>
+<script src="./forms.js"></script>
+</html>
