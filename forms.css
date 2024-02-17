@@ -116,3 +116,25 @@ html,body {
   margin-bottom: 0;
   margin-left: 5px;
 }
+@media (max-width:440px) {
+  #frame {
+    width: 88%;
+    margin: 15% auto 25% auto;
+  }
+  .email-input > input, .password-input > input {
+    width: 310px;
+  }
+
+    .email-input, .password-input {
+      width: 310px;
+    }
+}
+@media (max-width:376px) {
+  .email-input > input, .password-input > input {
+    width: 290px;
+  }
+
+    .email-input, .password-input {
+      width: 290px;
+    }
+}
