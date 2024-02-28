@@ -18,6 +18,12 @@ html,body {
   gap: 10px;
   background: rgba(255, 255, 255, 1);
 }
+@media (max-width:440px) {
+  #frame {
+    width: 88%;
+    margin: 15% auto 25% auto;
+  }
+}
 #frame > h1 {
   font-family: Roboto;
   font-size: 50px;
@@ -32,11 +38,27 @@ html,body {
   margin-right: auto;
   gap: 15px
 }
+@media (max-width:320px) {
+  .inputs {
+    margin-left: 9px;
+    margin-right: 2px;
+  }
+}
 .email-input, 
 .password-input {
   display: flex;
   flex-direction: column;
   width: 510px;
+}
+@media (max-width:440px) {
+  .email-input, .password-input {
+    width: 310px;
+  }
+}
+@media (max-width:320px) {
+  .email-input, .password-input {
+    width: 290px;
+  }
 }
 .email-input > p, 
 .password-input > p {
@@ -63,6 +85,16 @@ html,body {
   color: rgba(120, 120, 120, 1);
   padding-left: 10px;
 }
+@media (max-width:440px) {
+  .email-input > input, .password-input > input {
+    width: 310px;
+  }
+}
+@media (max-width:320px) {
+  .email-input > input, .password-input > input {
+    width: 245px;
+  }
+}
 .email-input > input::placeholder,
 .password-input > input::placeholder {
   font-weight: bold;
@@ -70,9 +102,37 @@ html,body {
   color: rgba(204, 204, 204, 1);
   padding-left: 10px;
 }
+
 .checkbox {
   display: flex;
   flex-direction: column;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid #6031bd;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #6031bd;
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
 .checkbox-input {
   display: flex;
@@ -87,10 +147,10 @@ html,body {
   text-align: left;
   color:rgba(120, 120, 120, 1);
 }
-.checkbox-input > input {
+/* .checkbox-input > input {
   width: 24px;
   height: 24px;
-}
+} */
 .button {
   display: flex;
   width: 180px;
@@ -116,25 +176,4 @@ html,body {
   margin-bottom: 0;
   margin-left: 5px;
 }
-@media (max-width:440px) {
-  #frame {
-    width: 88%;
-    margin: 15% auto 25% auto;
-  }
-  .email-input > input, .password-input > input {
-    width: 310px;
-  }
 
-    .email-input, .password-input {
-      width: 310px;
-    }
-}
-@media (max-width:376px) {
-  .email-input > input, .password-input > input {
-    width: 290px;
-  }
-
-    .email-input, .password-input {
-      width: 290px;
-    }
-}

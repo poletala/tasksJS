@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form</title>
   <link rel="stylesheet" href="./styles/Roboto.css">
-  <link rel="stylesheet" href="./forms.css">
+  <link rel="stylesheet" href="./styles/forms.css">
 </head>
 <body>
   <div id="root">
@@ -14,12 +14,20 @@
       <div class="inputs">
         <div class="email-input">
           <p>Email</p>
-          <input type="text" placeholder="Введите email" name="email" autocomplete="email" id="email">
+          <input 
+            type="text" 
+            placeholder="Введите email" 
+            name="email" 
+            autocomplete="email" 
+            id="email">
           <span id="error" class="error-text"></span>
         </div>
         <div class="password-input">
           <p>Пароль</p>
-          <input type="password" placeholder="Введите пароль" id="password">
+          <input 
+            type="password" 
+            placeholder="Введите пароль" 
+            id="password">
           <span id="error-password" class="error-text"></span>
         </div>
         <div class="checkbox">
@@ -31,9 +39,9 @@
         </div>
        
       </div>
-      <button class="button" type="button" onclick="myFunction()">Войти</button>
+      <button class="button" type="submit" onclick="checkInputs()">Войти</button>
     </form>
   </div>
 </body>
-<script src="./forms.js"></script>
+<script src="./script/forms.js"></script>
 </html>
